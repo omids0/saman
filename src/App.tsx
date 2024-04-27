@@ -1,5 +1,15 @@
+import { QueryClient, QueryClientProvider } from 'react-query'
+
+import TodosList from './components/todosList'
+
 function App() {
-  return <div>Hello World!!!</div>
+  const queryClient = new QueryClient()
+
+  return (
+    <QueryClientProvider client={queryClient}>
+      <TodosList />
+    </QueryClientProvider>
+  )
 }
 
 export default App
