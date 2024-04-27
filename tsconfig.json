@@ -1,26 +1,39 @@
 {
   "compilerOptions": {
+    /* Visit https://aka.ms/tsconfig.json to read more about this file */
+    /* Projects */
+    /* Language and Environment */
     "target": "es5",
-    "lib": [
-      "dom",
-      "dom.iterable",
-      "esnext"
-    ],
-    "allowJs": true,
-    "skipLibCheck": true,
-    "esModuleInterop": true,
-    "allowSyntheticDefaultImports": true,
-    "strict": true,
-    "forceConsistentCasingInFileNames": true,
-    "noFallthroughCasesInSwitch": true,
+    "lib": ["dom", "dom.iterable", "esnext"],
+    /* Modules */
     "module": "esnext",
     "moduleResolution": "node",
+    "baseUrl": ".",
     "resolveJsonModule": true,
-    "isolatedModules": true,
+    "sourceMap": false,
+    /* JavaScript Support */
+    "allowJs": true,
+    /* Emit */
     "noEmit": true,
-    "jsx": "react-jsx"
+    "noEmitOnError": true,
+    "removeComments": true,
+    /* Interop Constraints */
+    "isolatedModules": true,
+    "esModuleInterop": true,
+    "forceConsistentCasingInFileNames": true,
+    "jsx": "preserve",
+    "incremental": true,
+    /* Type Checking */
+    "strict": false,
+    /* Additional Checks */
+    "noUnusedLocals": true,
+    "noUnusedParameters": true,
+    "noImplicitReturns": true,
+    "noFallthroughCasesInSwitch": true,
+    /* Completeness */
+    "skipLibCheck": true,
+    "plugins": []
   },
-  "include": [
-    "src"
-  ]
+  "include": ["additional.d.ts", "**/*.ts", "**/*.tsx"],
+  "exclude": [".husky", ".vscode", "build", "node_modules", "public"]
 }
