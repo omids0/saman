@@ -1,13 +1,13 @@
 import { QueryClient, QueryClientProvider } from 'react-query'
 
-import TodosList from './components/todosList'
+import Todos from './components/todos'
 
 function App() {
   const queryClient = new QueryClient()
 
   return (
     <QueryClientProvider client={queryClient}>
-      <TodosList />
+      <Todos />
     </QueryClientProvider>
   )
 }
