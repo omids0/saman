@@ -1,23 +1,23 @@
-export interface ITodoData {
+export interface ITodoDataResponse {
   completed: boolean
   id: number
   title: string
   userId: number
 }
 
-export interface IGetTodo {
+export interface IGetTodoParams {
   id: number
 }
 
-export interface IUpdateTodos {
+export interface IUpdateTodosParams {
   id: number
   title: string
 }
 
-export interface ICreateTodo {
+export interface ICreateTodoParams {
   title: string
 }
 
-export interface IDeleteTodo {
+export interface IDeleteTodoParams {
   id: number
 }
