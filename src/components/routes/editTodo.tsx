@@ -3,7 +3,7 @@ import { useNavigate, useParams } from 'react-router-dom'
 
 import { useFetchTodo } from '../../hooks/useGetTodo'
 import { useUpdateTodo } from '../../hooks/useUpdateTodo'
-import CreateAndUpdateTodo from '../global/createAndEditTodo'
+import CreateAndUpdateTodo from '../global/createAndUpdateTodo'
 import Loading from '../global/loading'
 import SomeThingWrong from '../global/someThingWrong'
 
