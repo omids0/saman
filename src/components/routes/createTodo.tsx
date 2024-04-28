@@ -4,16 +4,21 @@ import { useNavigate } from 'react-router-dom'
 import { useCreateTodo } from '../../hooks/useCreateTodo'
 import CreateAndUpdateTodo from '../global/createAndEditTodo'
 import Loading from '../global/loading'
+import SomeThingWrong from '../global/someThingWrong'
 
 const CreateTodo: FC = () => {
   const navigate = useNavigate()
 
-  const { mutate, isLoading, isSuccess } = useCreateTodo()
+  const { mutate, isLoading, isSuccess, error } = useCreateTodo()
 
-  const handleSubmit = data => mutate({ title: data.title })
+  const handleSubmit = data => mutate({ ...data })
 
   if (isLoading) {
     return <Loading />
+  }
+
+  if (error) {
+    return <SomeThingWrong />
   }
 
   if (isSuccess) {

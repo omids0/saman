@@ -16,7 +16,7 @@ const EditTodo: FC = () => {
 
   const { isLoading: isLoadingUpdate, error: errorUpdate, isSuccess, mutate } = useUpdateTodo()
 
-  const handleSubmit = data => mutate({ title: data.title, id: data.id })
+  const handleSubmit = data => mutate({ ...data })
 
   if (isLoading || isLoadingUpdate) {
     return <Loading />
