@@ -2,9 +2,9 @@ import type { FC } from 'react'
 import { useNavigate } from 'react-router-dom'
 
 import { useCreateTodo } from '../../hooks/useCreateTodo'
-import CreateAndUpdateTodo from '../global/createAndUpdateTodo'
-import Loading from '../global/loading'
-import SomeThingWrong from '../global/someThingWrong'
+import CreateAndUpdateTodo from '../general/createAndUpdateTodo'
+import Loading from '../general/loading'
+import SomeThingWrong from '../general/someThingWrong'
 
 const CreateTodo: FC = () => {
   const navigate = useNavigate()

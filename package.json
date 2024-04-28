@@ -1,7 +1,10 @@
 {
   "name": "saman",
   "description": "front-end code challenge",
-  "author": "Omid SoheilNia",
+  "author": {
+    "name": "Omid SoheilNia",
+    "email": "soheilniao@gmail.com"
+  },
   "version": "0.1.0",
   "private": true,
   "engines": {
@@ -49,11 +52,6 @@
     "types": "tsc --pretty --noEmit",
     "prepare": "husky install",
     "format": "prettier --write \"src/**/*.{ts,tsx,js,jsx}\""
-  },
-  "lint-staged": {
-    "**/*.{js,jsx,ts,tsx}": [
-      "yarn run lint"
-    ]
   },
   "browserslist": {
     "production": [

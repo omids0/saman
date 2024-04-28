@@ -1,7 +1,7 @@
 import type { FC } from 'react'
 
 import ModalPortal from './modalPortal'
-import { TProps } from '../../types/components/global/basicModal'
+import { TProps } from '../../types/components/general/basicModal'
 
 const Modal: FC<TProps> = props => {
   return (

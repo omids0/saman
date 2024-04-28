@@ -2,7 +2,7 @@ import { useEffect, type FC } from 'react'
 import { useForm } from 'react-hook-form'
 
 import type { ITodoDataResponse } from '../../types/api/todos/interfaces'
-import type { TProps } from '../../types/components/global/createAndUpdateTodo'
+import type { TProps } from '../../types/components/general/createAndUpdateTodo'
 
 const CreateAndUpdateTodo: FC<TProps> = ({ todo, onSubmit }) => {
   const { handleSubmit, register, watch, reset, setValue } = useForm<ITodoDataResponse>({

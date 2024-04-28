@@ -3,7 +3,7 @@ import { useNavigate } from 'react-router-dom'
 
 import Modal from './modal'
 import { useDeleteTodo } from '../../hooks/useDeleteTodo'
-import type { TProps } from '../../types/components/global/todo'
+import type { TProps } from '../../types/components/general/todo'
 
 const Todo: FC<TProps> = ({ id, title, completed }) => {
   const navigate = useNavigate()
