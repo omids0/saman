@@ -25,12 +25,12 @@ const CreateAndUpdateTodo: FC<TProps> = ({ todo, onSubmit }) => {
   return (
     <form
       onSubmit={handleSubmit(handlerSubmit)}
-      className="border flex flex-col w-[20rem] h-[20rem] p-4 items-center justify-center gap-[5rem]"
+      className="border flex flex-col w-[20rem] h-[20rem] p-4 items-center justify-center gap-[5rem] rounded-md"
     >
       <input
         {...register('title')}
         placeholder="Write your todo here in brief..."
-        className="bg-gray-100 p-2 w-full"
+        className="bg-gray-100 p-2 w-full rounded-md"
       />
       {todo && (
         <div className="flex gap-2">
