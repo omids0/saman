@@ -5,7 +5,7 @@ import type { ITodoDataResponse } from '../../types/api/todos/interfaces'
 import type { TProps } from '../../types/components/global/createAndUpdateTodo'
 
 const CreateAndUpdateTodo: FC<TProps> = ({ todo, onSubmit }) => {
-  const { handleSubmit, register, watch, getValues, reset, setValue } = useForm<ITodoDataResponse>({
+  const { handleSubmit, register, watch, reset, setValue } = useForm<ITodoDataResponse>({
     defaultValues: {
       title: '',
       completed: false
@@ -35,7 +35,7 @@ const CreateAndUpdateTodo: FC<TProps> = ({ todo, onSubmit }) => {
       {todo && (
         <div className="flex gap-2">
           <p>Did you completed this ToDo?</p>
-          <input type="checkbox" checked={getValues('completed')} onChange={handleCompletedTodo} />
+          <input type="checkbox" checked={watch('completed')} onChange={handleCompletedTodo} />
         </div>
       )}
       {todo ? (

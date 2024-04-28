@@ -1,6 +1,6 @@
 import type { ReactNode } from 'react'
 
-export interface IBasicModal {
+export type TProps = {
   title?: string | JSX.Element
   children: ReactNode
   hasTitle?: boolean
