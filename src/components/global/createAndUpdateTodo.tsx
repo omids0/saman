@@ -29,7 +29,7 @@ const CreateAndUpdateTodo: FC<TProps> = ({ todo, onSubmit }) => {
     >
       <input
         {...register('title')}
-        placeholder="Write your todo here in brief..."
+        placeholder="Write your ToDo here in brief..."
         className="bg-gray-100 p-2 w-full rounded-md"
       />
       {todo && (
