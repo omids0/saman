@@ -1,10 +1,21 @@
 import axios from 'axios'
 
 import { EndpointsEnum } from '../types/api/todos/endpoints'
-import type { ICreateTodo, IDeleteTodo, IUpdateTodos } from '../types/api/todos/interfaces'
+import type {
+  ICreateTodo,
+  IDeleteTodo,
+  IGetTodo,
+  IUpdateTodos
+} from '../types/api/todos/interfaces'
 
 export const getTodos = async () => {
   const response = await axios.get(EndpointsEnum['TODOS'])
+
+  return response.data
+}
+
+export const getTodo = async ({ id }: IGetTodo) => {
+  const response = await axios.get(EndpointsEnum['TODOS'] + `/${id}`)
 
   return response.data
 }

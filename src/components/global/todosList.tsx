@@ -17,11 +17,7 @@ const TodosList: FC = () => {
   }
 
   return (
-    <div>
-      {data?.map(item => (
-        <Todo key={item.id} id={item.id} title={item.title} />
-      ))}
-    </div>
+    <div>{data && data.map(item => <Todo key={item.id} id={item.id} title={item.title} />)}</div>
   )
 }
 
