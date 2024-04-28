@@ -9,9 +9,15 @@ import SomeThingWrong from '../global/someThingWrong'
 const CreateTodo: FC = () => {
   const navigate = useNavigate()
 
-  const { mutate, isLoading, isSuccess, error } = useCreateTodo()
+  const { mutate, isLoading, error } = useCreateTodo()
 
-  const handleSubmit = data => mutate({ ...data })
+  const handleSubmit = data =>
+    mutate(
+      { ...data },
+      {
+        onSuccess: () => navigate('/')
+      }
+    )
 
   if (isLoading) {
     return <Loading />
@@ -19,10 +25,6 @@ const CreateTodo: FC = () => {
 
   if (error) {
     return <SomeThingWrong />
-  }
-
-  if (isSuccess) {
-    navigate('/')
   }
 
   return (

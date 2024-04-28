@@ -2,14 +2,25 @@ import { useState, type FC } from 'react'
 import { useNavigate } from 'react-router-dom'
 
 import Modal from './modal'
+import { useDeleteTodo } from '../../hooks/useDeleteTodo'
 import type { TProps } from '../../types/components/global/todo'
 
 const Todo: FC<TProps> = ({ id, title, completed }) => {
   const navigate = useNavigate()
 
-  const [openModal, setOpenModal] = useState('')
+  const [openModal, setOpenModal] = useState(false)
 
-  const handleCloseModal = () => setOpenModal('')
+  const { mutate } = useDeleteTodo()
+
+  const handleCloseModal = () => setOpenModal(false)
+
+  const handleDeleteTodo = () =>
+    mutate(
+      { id },
+      {
+        onSuccess: handleCloseModal
+      }
+    )
 
   return (
     <div
@@ -27,21 +38,23 @@ const Todo: FC<TProps> = ({ id, title, completed }) => {
         >
           Edit
         </button>
-        <button
-          className=" rounded px-1 bg-red-500 text-white"
-          onClick={() => setOpenModal(`${id}`)}
-        >
+        <button className=" rounded px-1 bg-red-500 text-white" onClick={() => setOpenModal(true)}>
           Delete
         </button>
       </div>
 
       <Modal visible={!!openModal} closeModal={handleCloseModal} hasCloseButton>
-        <div className="flex flex-col items-center w-[19rem]">
+        <div className="flex flex-col items-center w-[19rem] justify-center">
           <span className="font-bold">Are you sure about deleting this ToDo?!</span>
           <span>{`"${title}"`}</span>
         </div>
         <div className="flex justify-center gap-2">
-          <button className="border border-red-500 text-red-500 px-2 rounded-md">Confirm</button>
+          <button
+            className="border border-red-500 text-red-500 px-2 rounded-md"
+            onClick={handleDeleteTodo}
+          >
+            Confirm
+          </button>
           <button className="text-white px-2 rounded-md bg-red-500" onClick={handleCloseModal}>
             Cancel
           </button>

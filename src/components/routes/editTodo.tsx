@@ -14,9 +14,15 @@ const EditTodo: FC = () => {
 
   const { data, isLoading, error } = useFetchTodo({ id })
 
-  const { isLoading: isLoadingUpdate, error: errorUpdate, isSuccess, mutate } = useUpdateTodo()
+  const { isLoading: isLoadingUpdate, error: errorUpdate, mutate } = useUpdateTodo()
 
-  const handleSubmit = data => mutate({ ...data })
+  const handleSubmit = data =>
+    mutate(
+      { ...data },
+      {
+        onSuccess: () => navigate('/')
+      }
+    )
 
   if (isLoading || isLoadingUpdate) {
     return <Loading />
@@ -24,10 +30,6 @@ const EditTodo: FC = () => {
 
   if (error || errorUpdate) {
     return <SomeThingWrong />
-  }
-
-  if (isSuccess) {
-    navigate('/')
   }
 
   return (
