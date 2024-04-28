@@ -1,7 +1,7 @@
 import type { FC } from 'react'
 
-const CreateTodo: FC = () => {
+const CreateAndUpdateTodo: FC = () => {
   return <div className="bg-yellow-500">create form</div>
 }
 
-export default CreateTodo
+export default CreateAndUpdateTodo

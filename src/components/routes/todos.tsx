@@ -1,7 +1,7 @@
 import type { FC } from 'react'
 import { useNavigate } from 'react-router-dom'
 
-import TodosList from './todosList'
+import TodosList from '../global/todosList'
 
 const Todos: FC = () => {
   const navigate = useNavigate()
@@ -12,7 +12,7 @@ const Todos: FC = () => {
         <TodosList />
       </div>
       <button
-        className="bg-orange-500 p-2 rounded-md my-2 sticky bottom-1"
+        className="bg-orange-500 p-2 rounded-md my-2 sticky bottom-1 font-bold text-white"
         onClick={() => navigate('/create')}
       >
         Add New Todo

@@ -1,9 +1,9 @@
 import type { FC } from 'react'
 import { BrowserRouter, Routes, Route } from 'react-router-dom'
 
-import CreateTodo from '../components/createTodo'
-import EditTodo from '../components/editTodo'
-import Todos from '../components/todos'
+import CreateTodo from '../components/routes/createTodo'
+import EditTodo from '../components/routes/editTodo'
+import Todos from '../components/routes/todos'
 
 const AppRouter: FC = () => {
   return (
@@ -11,7 +11,7 @@ const AppRouter: FC = () => {
       <Routes>
         <Route path="/" element={<Todos />} />
         <Route path="/create" element={<CreateTodo />} />
-        <Route path="/edit" element={<EditTodo />} />
+        <Route path="/edit/:id" element={<EditTodo />} />
       </Routes>
     </BrowserRouter>
   )
