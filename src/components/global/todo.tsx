@@ -29,9 +29,9 @@ const Todo: FC<TProps> = ({ id, title, completed }) => {
     >
       <div className="flex gap-2">
         {completed ? (
-          <div className="bg-green-200 rounded-md px-2">Completed</div>
+          <div className="bg-green-200 rounded-md px-2 h-fit">Completed</div>
         ) : (
-          <div className="bg-red-200 rounded-md px-2">Incomplete</div>
+          <div className="bg-red-200 rounded-md px-2 h-fit">Incomplete</div>
         )}
         <p className="font-semibold text-md text-gray-800 first-letter:uppercase">{title}</p>
       </div>
