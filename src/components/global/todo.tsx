@@ -28,7 +28,7 @@ const Todo: FC<TProps> = ({ id, title, completed }) => {
       key={id}
     >
       <div className="flex gap-2">
-        <input type="checkbox" checked={completed} />
+        <input type="checkbox" checked={completed} onClick={() => ({})} />
         <p className="font-semibold text-md text-gray-800">{title}</p>
       </div>
       <div className="flex justify-end gap-2">
