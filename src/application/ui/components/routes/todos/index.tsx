@@ -1,7 +1,7 @@
 import type { FC } from 'react'
 import { useNavigate } from 'react-router-dom'
 
-import TodosList from '../general/todosList'
+import TodosList from '../../general/todosList'
 
 const Todos: FC = () => {
   const navigate = useNavigate()

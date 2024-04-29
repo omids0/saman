@@ -1,6 +1,6 @@
 import { QueryClient, QueryClientProvider } from 'react-query'
 
-import AppRouter from './routing/appRouter'
+import AppRouter from './routes'
 
 function App() {
   const queryClient = new QueryClient()

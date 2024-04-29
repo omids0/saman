@@ -1,9 +1,9 @@
 import { useState, type FC } from 'react'
 import { useNavigate } from 'react-router-dom'
 
-import Modal from './modal'
-import { useDeleteTodo } from '../../hooks/useDeleteTodo'
-import type { TProps } from '../../types/components/general/todo'
+import type { TProps } from './interface'
+import { useDeleteTodo } from '../../../hooks/useDeleteTodo'
+import Modal from '../modal'
 
 const Todo: FC<TProps> = ({ id, title, completed }) => {
   const navigate = useNavigate()

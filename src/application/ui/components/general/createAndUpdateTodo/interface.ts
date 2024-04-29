@@ -1,4 +1,4 @@
-import type { ITodoDataResponse } from '../../api/todos/interfaces'
+import type { ITodoDataResponse } from '../../../../entities/todo'
 
 export type TProps = {
   todo?: ITodoDataResponse

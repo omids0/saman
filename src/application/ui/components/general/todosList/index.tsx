@@ -1,9 +1,9 @@
 import type { FC } from 'react'
 
-import Loading from './loading'
-import SomeThingWrong from './someThingWrong'
-import Todo from './todo'
-import { useFetchTodos } from '../../hooks/useGetTodos'
+import { useFetchTodos } from '../../../hooks/useGetTodos'
+import Loading from '../loading'
+import SomeThingWrong from '../someThingWentWrong'
+import Todo from '../todoItem'
 
 const TodosList: FC = () => {
   const { data, isLoading, error } = useFetchTodos()
