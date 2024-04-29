@@ -1,6 +1,6 @@
 import type { FC } from 'react'
 
-import { TProps } from './interface'
+import type { TProps } from './interface'
 import ModalPortal from './modalPortal'
 
 const Modal: FC<TProps> = props => {

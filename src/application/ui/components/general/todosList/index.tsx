@@ -17,12 +17,12 @@ const TodosList: FC = () => {
   }
 
   return (
-    <div>
+    <>
       {data &&
         data.map(item => (
           <Todo key={item.id} id={item.id} title={item.title} completed={item.completed} />
         ))}
-    </div>
+    </>
   )
 }
 

@@ -23,10 +23,7 @@ const Todo: FC<TProps> = ({ id, title, completed }) => {
     )
 
   return (
-    <div
-      className="mb-2 border p-2 shadow-md rounded-md min-h-[8rem] flex flex-col justify-between"
-      key={id}
-    >
+    <div className="mb-2 border p-2 shadow-md rounded-md min-h-[8rem] flex flex-col justify-between">
       <div className="flex gap-2">
         {completed ? (
           <div className="bg-green-200 rounded-md px-2 h-fit">Completed</div>
@@ -47,7 +44,7 @@ const Todo: FC<TProps> = ({ id, title, completed }) => {
         </button>
       </div>
 
-      <Modal visible={!!openModal} closeModal={handleCloseModal} hasCloseButton>
+      <Modal visible={openModal} closeModal={handleCloseModal} hasCloseButton>
         <div className="flex flex-col items-center w-[19rem] justify-center">
           <span className="font-bold">Are you sure about deleting this ToDo?!</span>
           <span>{`"${title}"`}</span>
