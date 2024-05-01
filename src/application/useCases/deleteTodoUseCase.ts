@@ -1,8 +1,9 @@
 import axios from 'axios'
 
-import { EndpointsEnum } from '../entities/endpoints'
 import type { IDeleteTodoParams } from '../entities/todo'
 
+const baseUrl = process.env.REACT_APP_BASE_URL
+
 export const deleteTodoUseCase = async ({ id }: IDeleteTodoParams) => {
-  await axios.delete(EndpointsEnum['TODOS'] + `/${id}`)
+  await axios.delete(`${baseUrl}/${id}`)
 }
