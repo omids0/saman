@@ -1,9 +1,7 @@
-import type { FC } from 'react'
-
 import type { TProps } from './interface'
 import ModalPortal from './modalPortal'
 
-const Modal: FC<TProps> = props => {
+const Modal = (props: TProps) => {
   return (
     props.visible && (
       <ModalPortal

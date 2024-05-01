@@ -1,11 +1,11 @@
-import { useState, type FC } from 'react'
+import { useState } from 'react'
 import { useNavigate } from 'react-router-dom'
 
 import type { TProps } from './interface'
 import { useDeleteTodo } from '../../../../infrastructure/hooks/useDeleteTodo'
 import Modal from '../modal'
 
-const Todo: FC<TProps> = ({ id, title, completed }) => {
+const Todo = ({ id, title, completed }: TProps) => {
   const navigate = useNavigate()
 
   const [openModal, setOpenModal] = useState(false)

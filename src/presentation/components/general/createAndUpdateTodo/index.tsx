@@ -1,10 +1,10 @@
-import { useEffect, type FC } from 'react'
+import { useEffect } from 'react'
 import { useForm } from 'react-hook-form'
 
 import type { TProps } from './interface'
 import type { ITodoDataResponse } from '../../../../domain/entities/todo'
 
-const CreateAndUpdateTodo: FC<TProps> = ({ todo, onSubmit }) => {
+const CreateAndUpdateTodo = ({ todo, onSubmit }: TProps) => {
   const { handleSubmit, register, watch, reset, setValue } = useForm<ITodoDataResponse>({
     defaultValues: {
       title: '',

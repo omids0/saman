@@ -1,11 +1,9 @@
-import type { FC } from 'react'
-
 import { useGetTodos } from '../../../../infrastructure/hooks/useGetTodos'
 import Loading from '../loading'
 import SomeThingWrong from '../someThingWentWrong'
 import Todo from '../todoItem'
 
-const TodosList: FC = () => {
+const TodosList = () => {
   const { data, isLoading, error } = useGetTodos()
 
   if (isLoading) {

@@ -1,4 +1,3 @@
-import type { FC } from 'react'
 import { useNavigate } from 'react-router-dom'
 
 import { useCreateTodo } from '../../../../infrastructure/hooks/useCreateTodo'
@@ -6,7 +5,7 @@ import CreateAndUpdateTodo from '../../general/createAndUpdateTodo'
 import Loading from '../../general/loading'
 import SomeThingWrong from '../../general/someThingWentWrong'
 
-const CreateTodo: FC = () => {
+const CreateTodo = () => {
   const navigate = useNavigate()
 
   const { mutate, isLoading, error } = useCreateTodo()

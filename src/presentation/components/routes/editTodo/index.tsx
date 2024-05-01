@@ -1,4 +1,3 @@
-import type { FC } from 'react'
 import { useNavigate, useParams } from 'react-router-dom'
 
 import { useGetTodo } from '../../../../infrastructure/hooks/useGetTodo'
@@ -7,7 +6,7 @@ import CreateAndUpdateTodo from '../../general/createAndUpdateTodo'
 import Loading from '../../general/loading'
 import SomeThingWrong from '../../general/someThingWentWrong'
 
-const EditTodo: FC = () => {
+const EditTodo = () => {
   const { id } = useParams()
 
   const navigate = useNavigate()
