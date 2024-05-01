@@ -1,6 +1,6 @@
 import { useQuery } from 'react-query'
 
-import { getTodos } from '../services/getTodos'
+import { getTodos } from '../../infrastructure/services/getTodos'
 
 export const useGetTodos = () => {
   const { data, isLoading, error, refetch } = useQuery('todos', getTodos)

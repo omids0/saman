@@ -2,7 +2,7 @@ import { useState } from 'react'
 import { useNavigate } from 'react-router-dom'
 
 import type { TProps } from './interface'
-import { useDeleteTodo } from '../../../../infrastructure/hooks/useDeleteTodo'
+import { useDeleteTodo } from '../../../../application/hooks/useDeleteTodo'
 import Modal from '../modal'
 
 const Todo = ({ id, title, completed }: TProps) => {

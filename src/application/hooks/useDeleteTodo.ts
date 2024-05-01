@@ -1,6 +1,6 @@
 import { useMutation } from 'react-query'
 
-import { deleteTodo } from '../services/deleteTodo'
+import { deleteTodo } from '../../infrastructure/services/deleteTodo'
 
 export const useDeleteTodo = () => {
   const { mutate, isLoading, error } = useMutation(deleteTodo)

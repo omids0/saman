@@ -1,7 +1,7 @@
 import { useNavigate, useParams } from 'react-router-dom'
 
-import { useGetTodo } from '../../../../infrastructure/hooks/useGetTodo'
-import { useUpdateTodo } from '../../../../infrastructure/hooks/useUpdateTodo'
+import { useGetTodo } from '../../../../application/hooks/useGetTodo'
+import { useUpdateTodo } from '../../../../application/hooks/useUpdateTodo'
 import CreateAndUpdateTodo from '../../general/createAndUpdateTodo'
 import Loading from '../../general/loading'
 import SomeThingWrong from '../../general/someThingWentWrong'
