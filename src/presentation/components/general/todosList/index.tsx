@@ -1,4 +1,4 @@
-import { useGetTodos } from '../../../../application/hooks/useGetTodos'
+import { useGetTodos } from '../../../../infrastructure/hooks/useGetTodos'
 import Loading from '../loading'
 import SomeThingWrong from '../someThingWentWrong'
 import Todo from '../todoItem'

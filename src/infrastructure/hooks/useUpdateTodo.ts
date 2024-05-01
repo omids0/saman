@@ -1,6 +1,6 @@
 import { useMutation } from 'react-query'
 
-import { updateTodo } from '../../infrastructure/services/updateTodo'
+import { updateTodo } from '../services/updateTodo'
 
 export const useUpdateTodo = () => {
   const { mutate, isLoading, error } = useMutation(updateTodo)
